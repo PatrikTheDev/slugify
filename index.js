@@ -24,6 +24,7 @@ export default function slugify(string, options) {
 	if (typeof string !== 'string') {
 		throw new TypeError(`Expected a string, got \`${typeof string}\``);
 	}
+	if (string === 'index') return '/'
 
 	options = {
 		separator: '-',
